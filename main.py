@@ -42,14 +42,14 @@ while game_is_on:
     if ball.ycor() > 280 or ball.ycor() < -280:
         ball.bounce_y()
 
-    if ball.distance(pad_right) < 50 and ball.xcor() > 320 or ball.distance(pad_left) < 50 and ball.xcor() < -320:
+    if ball.distance(pad_right) < 40 and ball.xcor() > 325 or ball.distance(pad_left) < 40 and ball.xcor() < -325:
         ball.bounce_x()
 
-    if ball.xcor() > 380:
+    if ball.xcor() >= 380:
         ball.reset_position()
         scoreboard.l_point()
 
-    if ball.xcor() < -380:
+    if ball.xcor() <= -380:
         ball.reset_position()
         scoreboard.r_point()
 
